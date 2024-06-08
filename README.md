@@ -13,5 +13,19 @@ One of the free APIs (for plane tickets) we used is *sometimes* unreliable, but 
 
 Check out the website at https://joannef.sgedu.site/travelbuddy/.
 
-![Screenshot of website](images/screenshot1.jpeg)
-![Screenshot of website](images/screenshot2.jpeg)
+Fill out a form about your upcoming trip...
+
+![Screenshot of website form](images/screenshot0.jpeg)
+
+Browse the ideas we generate and save any you like...
+
+![Screenshot of website functionality](images/screenshot1.jpeg)
+![Screenshot of website functionality](images/screenshot2.jpeg)
+
+View your saved flights, hotels, and activities...
+
+![Screenshot of website functionality](images/screenshot3.jpeg)
+
+View all saved trips if you created an account...
+
+![Screenshot of website functionality](images/screenshot4.jpeg)
