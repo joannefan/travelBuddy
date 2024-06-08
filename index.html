@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,145 +10,148 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style>
     @media screen and (max-width: 768px) {
-        .content {
-            flex-direction: column;
-            max-width: 90%;
-            text-align: center;
-        }
+      .content {
+        flex-direction: column;
+        max-width: 90%;
+        text-align: center;
+      }
 
-        .image {
-            max-width: 90%;
-        }
+      .image {
+        max-width: 90%;
+      }
 
-        .image img {
-            height: 250px;
-        }
+      .image img {
+        height: 250px;
+      }
 
-        .content p {
-            text-align: center;
-        }
+      .content p {
+        text-align: center;
+      }
 
-        .content h2 {
-            text-align: center;
-        }
+      .content h2 {
+        text-align: center;
+      }
     }
-</style>
+  </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="catalog.php">Plan Your Trip</a></li>
-            <li><a href="index.html" class="logo"></a></li>
-            <li><a href="story.html">Our Story</a> </li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="user-icon">
-            <a href="login.php"><i class="fa fa-user" style="font-size:36px; color:white;"></i></a>
-        </div>
-    </nav>
-
-    <div class="dropdown">
-        <button onclick="toggleDropdown()" class="dropbtn">☰ Menu</button>
-        <div id="dropdownContent" class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="services.html">Our Services</a>
-            <a href="catalog.php">Plan Your Trip</a>
-            <a href="story.html">Our Story</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="login.php">Login</a>
-        </div>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="catalog.php">Plan Your Trip</a></li>
+      <li><a href="index.html" class="logo"></a></li>
+      <li><a href="story.html">Our Story</a> </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="user-icon">
+      <a href="login.php"><i class="fa fa-user" style="font-size:36px; color:white;"></i></a>
     </div>
+  </nav>
 
-    <header class="hero-section">
-        <img src="images/index-bg.jpg" alt="Hero Image">
-        <div class="hero-text">Travel Buddy</div>
-    </header>
-    <br /><br /><br />
+  <div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">☰ Menu</button>
+    <div id="dropdownContent" class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="catalog.php">Plan Your Trip</a>
+      <a href="story.html">Our Story</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="login.php">Login</a>
+    </div>
+  </div>
 
-    <div class="maintxt">
+  <header class="hero-section">
+    <img src="images/index-bg.jpg" alt="Hero Image">
+    <div class="hero-text">Travel Buddy</div>
+  </header>
+  <br /><br /><br />
+
+  <div class="maintxt">
 
     <section class="section">
-        <div class="content">
-            <div class="text1">
-                <h2>About Us</h2>
-                <p>Travel Buddy started its journey because of our love for travel and a desire to simplify trip planning.
-                Our mission is to make every trip an unforgettable adventure.</p>
-            </div>
-            <div class="image">
-                <a href="story.html" class="img-link">
-                    <img src="images/story-bg.jpg" alt="Blue skyline image of tokyo">
-                </a>
-            </div>
+      <div class="content">
+        <div class="text1">
+          <h2>About Us</h2>
+          <p>Travel Buddy started its journey because of our love for travel and a desire to simplify trip planning.
+            Our mission is to make every trip an unforgettable adventure.</p>
         </div>
+        <div class="image">
+          <a href="story.html" class="img-link">
+            <img src="images/story-bg.jpg" alt="Blue skyline image of tokyo">
+          </a>
+        </div>
+      </div>
     </section>
     <br />
 
     <section class="section">
-        <div class="content">
-            <div class="image">
-                <a href="catalog.php" class="img-link">
-                <img src="images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
-                </a>
-            </div>
-            <div class="text2">
-                <h2>Travel Packages</h2>
-                <p> Get started on your next adventure! Explore our diverse range of travel subscription packages that offer varying services and experiences based on
-                your preferences.</p>
-            </div>
+      <div class="content">
+        <div class="image">
+          <a href="catalog.php" class="img-link">
+            <img src="images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
+          </a>
         </div>
+        <div class="text2">
+          <h2>Travel Packages</h2>
+          <p> Get started on your next adventure! Explore our diverse range of travel subscription packages that offer
+            varying services and experiences based on
+            your preferences.</p>
+        </div>
+      </div>
     </section>
 
     <br />
     <section class="section">
-        <div class="content">
-            <div class="text1">
-                <h2>Contact Us</h2>
-                <p>Have inquiries or need assistance? Contact our support team!</p>
-            </div>
-            <div class="image">
-                <a href="contact.html" class="img-link">
-                <img src="images/contact-bg.jpg" alt="Blue walkway/alley in Santorini, Greece">
-                </a>
-            </div>
+      <div class="content">
+        <div class="text1">
+          <h2>Contact Us</h2>
+          <p>Have inquiries or need assistance? Contact our support team!</p>
         </div>
+        <div class="image">
+          <a href="contact.html" class="img-link">
+            <img src="images/contact-bg.jpg" alt="Blue walkway/alley in Santorini, Greece">
+          </a>
+        </div>
+      </div>
     </section>
     <br />
 
     <section class="section">
-        <div class="content">
-            <div class="image">
-                <a href="login.php" class="img-link">
-                    <img src="images/login-bg.jpg" alt="Sky-level view of the top of mountains and clouds">
-                </a>
-            </div>
-            <div class="text2">
-                <h2>Login</h2>
-                <p>Returning member? Log-in <a href="login.php">here!</a></p>
-            </div>
+      <div class="content">
+        <div class="image">
+          <a href="login.php" class="img-link">
+            <img src="images/login-bg.jpg" alt="Sky-level view of the top of mountains and clouds">
+          </a>
         </div>
+        <div class="text2">
+          <h2>Login</h2>
+          <p>Returning member? Log-in <a href="login.php">here!</a></p>
+        </div>
+      </div>
     </section>
     <br /><br />
-  
+
     <footer class="footer">
-        <div class="left">
-            <!-- Contact Information -->
-            <p>Contact Us</p>
-            <p>Email: contact@travelbuddy.com</p>
-            <p>Phone: +123456789</p>
-        </div>
-        <div class="social-icons">
-            <!-- Social Media Icons -->
-            <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-        </div>
-        <div class="right">
-            <!-- Copyright Statement -->
-            <p>&copy; 2023 </p>
-            <p>Travel Buddy</p>
-            <p>All rights reserved.</p>
-        </div>
+      <div class="left">
+        <!-- Contact Information -->
+        <p>Contact Us</p>
+        <p>Email: contact@travelbuddy.com</p>
+        <p>Phone: +123456789</p>
+      </div>
+      <div class="social-icons">
+        <!-- Social Media Icons -->
+        <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="right">
+        <!-- Copyright Statement -->
+        <p>&copy; 2023 </p>
+        <p>Travel Buddy</p>
+        <p>All rights reserved.</p>
+      </div>
     </footer>
+  </div>
 </body>
+
 </html>
