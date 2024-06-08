@@ -11,6 +11,9 @@ Written with HTML, CSS, JavaScript, PHP, MySQL.
 
 One of the free APIs (for plane tickets) we used is *sometimes* unreliable, but you can expect results from the other APIs (hotels, travel sites).
 
+--
+### Demo
+
 Check out the website at https://joannef.sgedu.site/travelbuddy/.
 
 Fill out a form about your upcoming trip...
@@ -19,8 +22,9 @@ Fill out a form about your upcoming trip...
 
 Browse the ideas we generate and save any you like...
 
-![Screenshot of website functionality](images/screenshot1.jpeg)
-![Screenshot of website functionality](images/screenshot2.jpeg)
+<img src="images/screenshot1.jpeg" alt="Screenshot of website form" height="600">
+
+<img src="images/screenshot2.jpeg" alt="Screenshot of website form" height="600">
 
 View your saved flights, hotels, and activities...
 
@@ -29,4 +33,4 @@ View your saved flights, hotels, and activities...
 Sign/log in is not necessary to play with the website's main functionality. 
 If you create an account, you can view all saved trips...
 
-![Screenshot of website functionality](images/screenshot4.jpeg)
+<img src="images/screenshot4.jpeg" alt="Screenshot of website form" height="600">
