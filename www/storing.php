@@ -107,7 +107,7 @@
     $package = $_REQUEST['package'];
 
     // Performing insert query execution
-    $sql = "INSERT INTO users  VALUES ('$first_name', 
+    $sql = "INSERT INTO Users VALUES ('$first_name', 
             '$last_name','$email','$card', '$package')";
 
     if (mysqli_query($conn, $sql)) {

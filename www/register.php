@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } elseif (!preg_match('/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i', trim($_POST["username"]))) {
     $username_err = "Please enter a valid email.";
   } else {
-    $sql = "SELECT id FROM users WHERE username = ?";
+    $sql = "SELECT id FROM Users WHERE username = ?";
 
     if ($stmt = $conn->prepare($sql)) {
       mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check input errors before inserting in database
   if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
 
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    $sql = "INSERT INTO Users (username, password) VALUES (?, ?)";
 
     if ($stmt = $conn->prepare($sql)) {
       // Bind variables to the prepared statement as parameters

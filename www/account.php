@@ -9,7 +9,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false) {
 require_once "shared/db_conn.php";
 
 $email = $_SESSION["username"];
-$sql = "SELECT username, info FROM trips";
+$sql = "SELECT username, tripInfo FROM Trips";
 $result = $conn->query($sql);
 
 echo '<nav class="navbar">
@@ -48,7 +48,7 @@ $count = 0;
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     if ($row["username"] == $email) {
-      $final = $row["info"];
+      $final = $row["tripInfo"];
       $tripList[] = $final;
 
       $count = $count + 1;

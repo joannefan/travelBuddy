@@ -30,7 +30,7 @@ require_once "shared/db_conn.php";
 $tripInfoText = htmlspecialchars($tripInfo, ENT_QUOTES, 'UTF-8');
 
 // Performing insert query execution
-$sql = "INSERT INTO trips (username, info) VALUES ('$email', '$tripInfoText')";
+$sql = "INSERT INTO Trips (username, tripInfo) VALUES ('$email', '$tripInfoText')";
 
 if (!mysqli_query($conn, $sql)) {
   echo "ERROR: Sorry $sql. " . mysqli_error($conn);
