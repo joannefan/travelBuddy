@@ -5,32 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Subscription Homepage</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style>
-    @media screen and (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        max-width: 90%;
-        text-align: center;
-      }
-
-      .image {
-        max-width: 90%;
-      }
-
-      .image img {
-        height: 250px;
-      }
-
-      .content p {
-        text-align: center;
-      }
-
-      .content h2 {
-        text-align: center;
-      }
+    li {
+      list-style: none;
     }
   </style>
 </head>
@@ -62,47 +42,35 @@
 
   <header class="hero-section">
     <!-- Image spanning the entire page -->
-    <img src="images/story-bg.jpg" alt="Blue skyline image of tokyo">
-    <div class="hero-text">Our Story</div>
+    <img src="images/services-bg.jpg" alt="Hero Image">
+    <div class="hero-text">Our Services</div>
   </header>
   <br />
 
-  <section class="section">
-    <div class="content">
-      <div class="image">
-        <img class="photos" src="images/sibling.jpg"
-          alt="photo of cofounder siblings standing side by side with city landscape in the back">
-      </div>
-      <div class="text2">
-        <h2>Vacation Made Easy</h2>
-        <p>
-          Travel Buddy was founded out of frustration with the mess of travel websites, airlines, hotels, and
-          itineraries all across different booking platforms. Our co-founder, Jane, was an excited college student ready
-          to embark on her graduation trip - only to get lost in where to find
-          the best deals and keep track of everything. Overwhelmed instead of excited to head off to a rewarding and
-          relaxing trip, Jane turned to her brother Jake, who got to work on an easy, all-in-one place to store vacation
-          plans.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <div class="maintxt">
+
     <section class="parasection">
       <div class="textsection">
-        <p>
-          Today, our company has quickly grown to not only store vacation plans, but also build them to make life as
-          easy as possible for our customers. We are a small but mighty team, still based in the family values of our
-          founders. 
+        <h2>What do we offer?</h2>
+        <p>Let us help you plan your perfect vacation! Using our services will allow for you to gain the vacation of
+          your dreams without the stress of planning, just give us your dream destination and we'll do the rest. After
+          specifying your travel destination, you can also customize further by genre of events you'd like us to
+          reccommend. If you want food we will give you a list of amazing restaurants and cafes, if you want the
+          ultimate sightseeing experience we will provide you tourist attractions, and so many more categories to
+          choose from.</p><br />
+
+        <p><i><strong>Our offerings include 3 special packages to choose from!</strong></i></p>
+        <p style="text-align: left; list-style: none;">
+          <li>Basic: Flights &amp; hotels</li>
+          <li>Gold: Flights, hotels, &amp; attractions</li>
+          <li>Premium: Flights, hotels, attractions, &amp; food</li>
         </p>
         <br />
-        <p> 
-          All that to say, vacation should be easy and we're here to help to make it as seamless a process as
-          possible. We're always here to help our customers get the best vacation experience possible, because we
-          understand how frustrating planning can be. Contact us with any questions, comments, or feedback at all and a
-          member of our team will get back to within 24 hours, guaranteed.
-        </p>
       </div>
+
+      <a href="catalog.php">
+        <button>Plan Your Trip Today</button>
+      </a>
     </section>
 
     <footer class="footer">
@@ -125,7 +93,6 @@
       </div>
     </footer>
   </div>
-
 </body>
 
 </html>

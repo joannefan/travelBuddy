@@ -25,25 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // exit();
 }
 
-//storing the required for data
-//read data from the form
-$servername = "localhost";
-$username = "uldx2rdrq1961";
-$password = "2*b4$4p^J77C";
-$dbname = "db22duqcno8ssd";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+require_once "shared/db_conn.php";
 
 $tripInfoText = htmlspecialchars($tripInfo, ENT_QUOTES, 'UTF-8');
 
 // Performing insert query execution
-$sql = "INSERT INTO users  VALUES ('$first_name', 
-        '$last_name','$email','$card', '$package', '$tripInfoText')";
+$sql = "INSERT INTO trips (username, info) VALUES ('$email', '$tripInfoText')";
 
 if (!mysqli_query($conn, $sql)) {
   echo "ERROR: Sorry $sql. " . mysqli_error($conn);
@@ -60,7 +47,7 @@ $conn->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Results</title>
   <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style type="text/css">

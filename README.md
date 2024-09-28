@@ -7,11 +7,6 @@ By Joanne, Lillian, Sristi, and Shannon, for a web programming course.
 Written with HTML, CSS, JavaScript, PHP, MySQL. 
 
 --
-### Bugs ⚠️
-
-One of the free APIs (for plane tickets) we used is *sometimes* unreliable, but you can expect results from the other APIs (hotels, travel sites).
-
---
 ### Demo
 
 Check out the website at https://joannef.sgedu.site/travelbuddy/.

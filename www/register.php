@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "shared/db_conn.php";
 
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $sql = "SELECT id FROM users WHERE username = ?";
 
-    if ($stmt = mysqli_prepare($link, $sql)) {
+    if ($stmt = $conn->prepare($sql)) {
       mysqli_stmt_bind_param($stmt, "s", $param_username);
 
       $param_username = trim($_POST["username"]);
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
 
-    if ($stmt = mysqli_prepare($link, $sql)) {
+    if ($stmt = $conn->prepare($sql)) {
       // Bind variables to the prepared statement as parameters
       mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
 
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-  mysqli_close($link);
+  $conn->close();
 }
 ?>
 
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style>

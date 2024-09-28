@@ -97,19 +97,7 @@
   <div class="catalog-center">
 
     <?php
-    //storing the required for data
-    //read data from the form
-    $servername = "localhost";
-    $username = "uldx2rdrq1961";
-    $password = "2*b4$4p^J77C";
-    $dbname = "db22duqcno8ssd";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
+    require_once "shared/db_conn.php";
 
     //store data in database
     $first_name =  $_REQUEST['first'];
@@ -165,19 +153,9 @@
       function validateUser() {
         var name = document.getElementById("uname").value;
         <?php
-        $servername = "localhost";
-        $username = "uldx2rdrq1961";
-        $password = "3*6hE1ge32`%";
-        $dbname = "db22duqcno8ssd";
+        require_once "shared/db_conn.php";
 
         $name = name;
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-        }
 
         $result = mysql_query("SELECT * FROM login");
         $num_rows = mysql_num_rows($result);

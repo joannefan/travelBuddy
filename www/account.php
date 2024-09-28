@@ -6,17 +6,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false) {
   exit;
 }
 
-$servername = "localhost";
-$username = "uldx2rdrq1961";
-$password = "2*b4$4p^J77C";
-$dbname = "db22duqcno8ssd";
+require_once "shared/db_conn.php";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 $email = $_SESSION["username"];
-$sql = "SELECT * FROM users";
+$sql = "SELECT username, info FROM trips";
 $result = $conn->query($sql);
 
 echo '<nav class="navbar">
@@ -54,7 +47,7 @@ $tripList = [];
 $count = 0;
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
-    if ($row["email"] == $email) {
+    if ($row["username"] == $email) {
       $final = $row["info"];
       $tripList[] = $final;
 
@@ -77,7 +70,7 @@ echo '</div><p><a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your
 <head>
   <meta charset="UTF-8">
   <title>Account</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>

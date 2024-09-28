@@ -8,7 +8,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 }
 
 // Include config file
-require_once "config.php";
+require_once "shared/db_conn.php";
 
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -30,7 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($username_err) && empty($password_err)) {
     $sql = "SELECT id, username, password FROM users WHERE username = ?";
 
-    if ($stmt = mysqli_prepare($link, $sql)) {
+    // if ($stmt = mysqli_prepare($link, $sql)) {
+    if ($stmt = $conn->prepare($sql)) {
       mysqli_stmt_bind_param($stmt, "s", $param_username);
 
       $param_username = $username;
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if (mysqli_stmt_fetch($stmt)) {
             if (password_verify($password, $hashed_password)) {
               // Password is correct, so start a new session
-              session_start();
+              // session_start();
 
               $_SESSION["loggedin"] = true;
               $_SESSION["id"] = $id;
@@ -69,7 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-  mysqli_close($link);
+  // mysqli_close($link);
+  $conn->close();
 }
 ?>
 
@@ -79,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style>
