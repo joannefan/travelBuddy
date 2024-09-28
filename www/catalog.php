@@ -396,7 +396,7 @@
   </div>
 
   <header class="hero-section">
-    <img src="images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
+    <img src="public/images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
     <div class="hero-text">Catalog</div>
   </header>
   <br />

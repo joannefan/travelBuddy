@@ -24,7 +24,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background-image: url("images/finalLogo.png");
+  background-image: url("public/images/finalLogo.png");
   background-position: bottom;
   background-size: 80%;
   background-repeat: no-repeat;

@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>';
   ?>
   <header class="hero-section">
-    <img src="images/login-bg.jpg" alt="Sky-level view of the top of mountains and clouds">
+    <img src="public/images/login-bg.jpg" alt="Sky-level view of the top of mountains and clouds">
     <div class="hero-text">Login
       <p style="font-size:16px;">Please fill in your credentials to login.</p>
 

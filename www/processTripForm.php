@@ -702,7 +702,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     text = text.replace(/_/g, ' ');
     capitalized = text[0].toUpperCase() + text.slice(1);
 
-    const html = `<div class='tag-container'><img src='images/tag-icon.png' alt='grey tag with text'><div class='tag-text'>${capitalized}</div></div>`;
+    const html = `<div class='tag-container'><img src='public/images/tag-icon.png' alt='grey tag with text'><div class='tag-text'>${capitalized}</div></div>`;
 
     return html;
   }

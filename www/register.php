@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>';
     ?>
     <!-- Image spanning the entire page -->
-    <img src="images/login-bg.jpg" alt="Hero Image" />
+    <img src="public/images/login-bg.jpg" alt="Hero Image" />
     <div class="wrapper">
       <h2 style="font-size:3em">Sign Up</h2>
       <p style="font-size:18px;">Please fill this form to create an account.</p>

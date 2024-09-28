@@ -37,7 +37,7 @@ echo '<nav class="navbar">
     </div>
     <header class="hero-section">
     <img
-    src="images/login-bg.jpg"
+    src="public/images/login-bg.jpg"
     alt="Hero Image">
     <div class="hero-text">Account
     <p style="font-size:30px;"> Here are your previous trips!</p>';
