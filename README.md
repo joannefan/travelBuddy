@@ -13,19 +13,19 @@ Check out the website at https://joannef.sgedu.site/travelbuddy/.
 
 Fill out a form about your upcoming trip...
 
-<img src="screenshot0.jpeg" alt="Screenshot of website form" height="600">
+<img src="screenshots/screenshot0.jpeg" alt="Screenshot of website form" height="600">
 
 Browse the ideas we generate and save any you like...
 
-<img src="screenshot1.jpeg" alt="Screenshot of website form" height="600">
+<img src="screenshots/screenshot1.jpeg" alt="Screenshot of website form" height="340">
 
-<img src="screenshot2.jpeg" alt="Screenshot of website form" height="600">
+<img src="screenshots/screenshot2.jpeg" alt="Screenshot of website form" height="280">
 
 View your saved flights, hotels, and activities...
 
-<img src="screenshot3.jpeg" alt="Screenshot of website form" height="600">
+<img src="screenshots/screenshot3.jpeg" alt="Screenshot of website form" height="500">
 
 Sign/log in is not necessary to play with the website's main functionality. 
 If you create an account, you can view all saved trips...
 
-<img src="screenshot4.jpeg" alt="Screenshot of website form" height="600">
+<img src="screenshots/screenshot4.jpeg" alt="Screenshot of website form" height="280">
