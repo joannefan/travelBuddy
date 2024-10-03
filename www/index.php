@@ -36,30 +36,7 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="services.html">Our Services</a></li>
-      <li><a href="catalog.php">Plan Your Trip</a></li>
-      <li><a href="index.html" class="logo"></a></li>
-      <li><a href="story.html">Our Story</a> </li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <div class="user-icon">
-      <a href="login.php"><i class="fa fa-user" style="font-size:36px; color:white;"></i></a>
-    </div>
-  </nav>
-
-  <div class="dropdown">
-    <button onclick="toggleDropdown()" class="dropbtn">☰ Menu</button>
-    <div id="dropdownContent" class="dropdown-content">
-      <a href="index.html">Home</a>
-      <a href="services.html">Our Services</a>
-      <a href="catalog.php">Plan Your Trip</a>
-      <a href="story.html">Our Story</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="login.php">Login</a>
-    </div>
-  </div>
+  <?php include 'shared/navbar.php'; ?>
 
   <header class="hero-section">
     <img src="public/images/index-bg.jpg" alt="Hero Image">
@@ -77,7 +54,7 @@
             Our mission is to make every trip an unforgettable adventure.</p>
         </div>
         <div class="image">
-          <a href="story.html" class="img-link">
+          <a href="story.php" class="img-link">
             <img src="public/images/story-bg.jpg" alt="Blue skyline image of tokyo">
           </a>
         </div>
@@ -109,7 +86,7 @@
           <p>Have inquiries or need assistance? Contact our support team!</p>
         </div>
         <div class="image">
-          <a href="contact.html" class="img-link">
+          <a href="contact.php" class="img-link">
             <img src="public/images/contact-bg.jpg" alt="Blue walkway/alley in Santorini, Greece">
           </a>
         </div>
@@ -126,7 +103,7 @@
         </div>
         <div class="text2">
           <h2>Login</h2>
-          <p>Returning member? Log-in <a href="login.php">here!</a></p>
+          <p>Returning member? Log-in <a class="inline-link" href="login.php">here!</a></p>
         </div>
       </div>
     </section>

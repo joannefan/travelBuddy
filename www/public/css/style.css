@@ -405,3 +405,30 @@ button:hover {
   transform: scale(1.1);
   color: white;
 }
+
+/* inline links styling */
+.inline-link {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.inline-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: black;
+  transition: width 0.2s ease;
+}
+
+.inline-link:hover {
+  color: #4e92a6;
+}
+
+.inline-link:hover::after {
+  width: 100%;
+}
