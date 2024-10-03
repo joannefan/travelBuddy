@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       font-size: 18px;
       padding: 10px;
       padding-bottom: 0px;
-      border-radius: 20px;
+      border-radius: 5px;
       line-height: 1.5em;
       margin: 10px;
       width: 300px;
@@ -245,7 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       font-weight: 800;
       font-family: PT Serif;
       padding: 5px;
-      border-radius: 20px;
+      border-radius: 5px;
       border: none;
       cursor: pointer;
       transition: transform 0.3s, background-color 0.3s;
@@ -269,7 +269,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       font-size: 22px;
       font-weight: 800;
       padding: 20px;
-      border-radius: 20px;
+      border-radius: 5px;
       border: none;
       cursor: pointer;
       transition: transform 0.3s, background-color 0.3s;
@@ -329,29 +329,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
   <br />
   <form id="done-form" action="showResults.php" method="POST">
-    <input type="submit" id="done-submit" value="I'm done!">
+    <input type="submit" value="I'm done!">
   </form>
   <br /><br />
 </body>
-<footer class="footer">
-  <div class="left">
-    <!-- Contact Information -->
-    <p>Contact Us</p>
-    <p>Email: contact@travelbuddy.com</p>
-    <p>Phone: +123456789</p>
-  </div>
-  <div class="social-icons">
-    <!-- Social Media Icons -->
-    <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-  </div>
-  <div class="right">
-    <!-- Copyright Statement -->
-    <p>&copy; 2023 </p>
-    <p>Travel Buddy</p>
-    <p>All rights reserved.</p>
-  </div>
-</footer>
+<?php include 'shared/footer.php'; ?>
 
 <script>
   const fname = <?php echo json_encode($first_name); ?>;

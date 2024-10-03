@@ -111,7 +111,7 @@
             '$last_name','$email','$card', '$package')";
 
     if (mysqli_query($conn, $sql)) {
-      echo "Thank you " . $first_name . " for your purchase! Would you like to create an account?<br>
+      echo "Thank you " . $first_name . " for your purchase! Would you like to create an account?<br/>
             <button class=btn onclick=document.getElementById('login').style.display='block' style=width:auto;> yes </button> <button class=btn> no </button>";
     } else {
       echo "ERROR: Hush! Sorry $sql. " . mysqli_error($conn);

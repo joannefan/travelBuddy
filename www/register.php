@@ -94,97 +94,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
-  <style>
-    .wrapper {
-      width: 40%;
-      padding: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .btn {
-      display: inline-block;
-      align-content: center;
-      text-align: center;
-      background-color: #79adc0;
-      color: rgb(255, 255, 255);
-      font-size: 22px;
-      font-weight: 800;
-      padding: 10px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #4e92a6;
-      transform: scale(1.1);
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="public/css/form.css">
 </head>
 
 <body>
-  <!-- TODO move php outside header -->
-  <header class="hero-section">
-    <?php include 'shared/navbar.php'; ?>
+  <?php include 'shared/navbar.php';
+  include 'shared/functions.php';
+  createHeroSection('public/images/login-bg.jpg', 'Hero Image', 'Sign Up');
+  ?>
+  <div class="form-container">
+    <p class="form-instruction">Please fill this form to create an account.</p>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="submit-btn" value="Submit">
+      </div>
+      <p class="form-footer">Already have an account? <a href="login.php" class="inline-link">Login here</a>.</p>
+    </form>
+  </div>
 
-    <!-- Image spanning the entire page -->
-    <img src="public/images/login-bg.jpg" alt="Hero Image" />
-    <div class="wrapper">
-      <h2 style="font-size:3em">Sign Up</h2>
-      <p style="font-size:18px;">Please fill this form to create an account.</p>
-      <br>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group">
-          <label style="font-size:30px;">Email</label>
-          <input style="padding:5px;" type="text" id="email" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-          <span style="font-size:16px;" class="invalid-feedback"><?php echo $username_err; ?></span>
-        </div>
-        <div class="form-group">
-          <label style="font-size:30px" ;>Password</label>
-          <input style="padding:5px;" type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-          <span style="font-size:16px;" class="invalid-feedback"><?php echo $password_err; ?></span>
-        </div>
-        <div class="form-group">
-          <label style="font-size:30px" ;>Confirm Password</label>
-          <input style="padding:5px;" type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-          <span style="font-size:16px;" class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-        </div>
-        <div class="form-group">
-          <br>
-          <input type="submit" class="btn" value="Submit">
-        </div>
-        <p style="font-size:30px;">Already have an account? <a href="login.php">Login here</a>.</p>
-      </form>
-    </div>
-  </header>
-  <footer class="footer">
-    <div class="left">
-      <!-- Contact Information -->
-      <p>Contact Us</p>
-      <p>Email: contact@travelbuddy.com</p>
-      <p>Phone: +123456789</p>
-    </div>
-    <div class="social-icons">
-      <!-- Social Media Icons -->
-      <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-    </div>
-    <div class="right">
-      <!-- Copyright Statement -->
-      <p>&copy; 2023 </p>
-      <p>Travel Buddy</p>
-      <p>All rights reserved.</p>
-    </div>
-  </footer>
+  <?php include 'shared/footer.php'; ?>
 </body>
 
 </html>

@@ -1,0 +1,64 @@
+.submit-btn {
+  width: 100%;
+}
+
+input,
+textarea {
+  font-family: 'Averia Serif Libre', serif;
+}
+
+.form-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-instruction {
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  font-size: 14px;
+  color: #dc3545;
+}
+
+.signup-prompt {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 15px;
+}

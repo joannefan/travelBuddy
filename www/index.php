@@ -36,98 +36,90 @@
 </head>
 
 <body>
-  <?php include 'shared/navbar.php'; ?>
+  <?php
+  include 'shared/navbar.php';
+  include 'shared/functions.php';
 
-  <header class="hero-section">
-    <img src="public/images/index-bg.jpg" alt="Hero Image">
-    <div class="hero-text">Travel Buddy</div>
-  </header>
+  createHeroSection('public/images/index-bg.jpg', 'Hero Image', 'Travel Buddy');
+  ?>
   <br /><br /><br />
 
   <div class="maintxt">
+    <?php
+    function createSection($title, $text, $imgSrc, $imgAlt, $link, $textClass)
+    {
+      $textBlock = '
+            <div class="' . $textClass . '">
+                <h2>' . $title . '</h2>
+                <p>' . $text . '</p>
+            </div>';
 
-    <section class="section">
-      <div class="content">
-        <div class="text1">
-          <h2>About Us</h2>
-          <p>Travel Buddy started its journey because of our love for travel and a desire to simplify trip planning.
-            Our mission is to make every trip an unforgettable adventure.</p>
-        </div>
-        <div class="image">
-          <a href="story.php" class="img-link">
-            <img src="public/images/story-bg.jpg" alt="Blue skyline image of tokyo">
-          </a>
-        </div>
-      </div>
-    </section>
-    <br />
+      $imageBlock = '
+            <div class="image">
+                <a href="' . $link . '" class="img-link">
+                    <img src="' . $imgSrc . '" alt="' . $imgAlt . '">
+                </a>
+            </div>';
 
-    <section class="section">
-      <div class="content">
-        <div class="image">
-          <a href="catalog.php" class="img-link">
-            <img src="public/images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
-          </a>
-        </div>
-        <div class="text2">
-          <h2>Travel Packages</h2>
-          <p> Get started on your next adventure! Explore our diverse range of travel subscription packages that offer
-            varying services and experiences based on
-            your preferences.</p>
-        </div>
-      </div>
-    </section>
+      if ($textClass == 'text1') {
+        $content = $textBlock . $imageBlock;  // Text first
+      } else {
+        $content = $imageBlock . $textBlock;  // Image first
+      }
 
-    <br />
-    <section class="section">
-      <div class="content">
-        <div class="text1">
-          <h2>Contact Us</h2>
-          <p>Have inquiries or need assistance? Contact our support team!</p>
-        </div>
-        <div class="image">
-          <a href="contact.php" class="img-link">
-            <img src="public/images/contact-bg.jpg" alt="Blue walkway/alley in Santorini, Greece">
-          </a>
-        </div>
-      </div>
-    </section>
-    <br />
+      echo '
+        <section class="section">
+            <div class="content">
+                ' . $content . '
+            </div>
+        </section>
+        <br />';
+    }
+    ?>
 
-    <section class="section">
-      <div class="content">
-        <div class="image">
-          <a href="login.php" class="img-link">
-            <img src="public/images/login-bg.jpg" alt="Sky-level view of the top of mountains and clouds">
-          </a>
-        </div>
-        <div class="text2">
-          <h2>Login</h2>
-          <p>Returning member? Log-in <a class="inline-link" href="login.php">here!</a></p>
-        </div>
-      </div>
-    </section>
-    <br /><br />
+    <?php
+    // About Us Section
+    createSection(
+      'About Us',
+      'Travel Buddy started its journey because of our love for travel and a desire to simplify trip planning. Our mission is to make every trip an unforgettable adventure.',
+      'public/images/story-bg.jpg',
+      'Blue skyline image of Tokyo',
+      'story.php',
+      'text1'
+    );
 
-    <footer class="footer">
-      <div class="left">
-        <!-- Contact Information -->
-        <p>Contact Us</p>
-        <p>Email: contact@travelbuddy.com</p>
-        <p>Phone: +123456789</p>
-      </div>
-      <div class="social-icons">
-        <!-- Social Media Icons -->
-        <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-      </div>
-      <div class="right">
-        <!-- Copyright Statement -->
-        <p>&copy; 2023 </p>
-        <p>Travel Buddy</p>
-        <p>All rights reserved.</p>
-      </div>
-    </footer>
+    // Travel Packages Section
+    createSection(
+      'Travel Packages',
+      'Get started on your next adventure! Explore our diverse range of travel subscription packages that offer varying services and experiences based on your preferences.',
+      'public/images/plan-bg.jpg',
+      'Overhead view of a beach shore, bright blue water',
+      'catalog.php',
+      'text2'
+    );
+
+    // Contact Us Section
+    createSection(
+      'Contact Us',
+      'Have inquiries or need assistance? Contact our support team!',
+      'public/images/contact-bg.jpg',
+      'Blue walkway or alley in Santorini, Greece',
+      'contact.php',
+      'text1'
+    );
+
+    // Login Section
+    createSection(
+      'Login',
+      'Returning member? Log-in <a class="inline-link" href="login.php">here!</a>',
+      'public/images/login-bg.jpg',
+      'Sky-level view of the top of mountains and clouds',
+      'login.php',
+      'text2'
+    );
+    ?>
+
+    <?php include 'shared/footer.php'; ?>
   </div>
 </body>
 

@@ -12,15 +12,6 @@ $email = $_SESSION["username"];
 $sql = "SELECT username, tripInfo FROM Trips";
 $result = $conn->query($sql);
 
-include 'shared/navbar.php';
-
-echo '<header class="hero-section">
-    <img
-    src="public/images/login-bg.jpg"
-    alt="Hero Image">
-    <div class="hero-text">Account
-    <p style="font-size:30px;"> Here are your previous trips!</p>';
-
 //check to see if the emails match
 $tripList = [];
 $count = 0;
@@ -36,11 +27,19 @@ if ($result->num_rows > 0) {
 
   $encodedTrips = json_encode($tripList);
 }
+
+include 'shared/navbar.php';
+include 'shared/functions.php';
+
 if ($count == 0) {
-  echo 'You have no records with us. <a href="catalog.php">Plan a trip today!</a>';
+  $heroText = 'Account <p style="font-size:30px;"><br/> You have no trips saved! <a class="inline-link" href="catalog.php">Plan a trip today ✈️</a></p>';
+} else {
+  $heroText = 'Account <p style="font-size:30px;"><br/> Here are your previous trips!</p>';
 }
-echo '</div><p><a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
-    </p></header><br>';
+
+createHeroSection('public/images/login-bg.jpg', 'Hero Image', $heroText);
+
+echo '<br/>';
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +54,6 @@ echo '</div><p><a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your
   <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
   <style type="text/css">
     body {
-      width: 100%;
       background-color: white;
       text-align: center;
       justify-content: center;
@@ -155,7 +153,7 @@ echo '</div><p><a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your
       font-size: 18px;
       padding: 10px;
       padding-bottom: 0px;
-      border-radius: 20px;
+      border-radius: 5px;
       line-height: 1.5em;
       margin: 15px;
       width: 300px;
@@ -237,26 +235,9 @@ echo '</div><p><a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your
     });
   </script>
   <a href="logout.php" class="signOut"><button>Sign Out</button></a>
-  <br><br>
-  <footer class="footer">
-    <div class="left">
-      <!-- Contact Information -->
-      <p>Contact Us</p>
-      <p>Email: contact@travelbuddy.com</p>
-      <p>Phone: +123456789</p>
-    </div>
-    <div class="social-icons">
-      <!-- Social Media Icons -->
-      <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-    </div>
-    <div class="right">
-      <!-- Copyright Statement -->
-      <p>&copy; 2023 </p>
-      <p>Travel Buddy</p>
-      <p>All rights reserved.</p>
-    </div>
-  </footer>
+  <br /><br />
+
+  <?php include 'shared/footer.php'; ?>
 </body>
 
 </html>

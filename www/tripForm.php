@@ -84,7 +84,7 @@ $package = $_POST['package'];
       font-size: 22px;
       font-weight: 800;
       padding: 20px;
-      border-radius: 20px;
+      border-radius: 5px;
       margin-top: 20px;
       border: none;
       cursor: pointer;
@@ -204,25 +204,7 @@ $package = $_POST['package'];
     <div class="input-err"></div>
   </form>
   <br />
-  <footer class="footer">
-    <div class="left">
-      <!-- Contact Information -->
-      <p>Contact Us</p>
-      <p>Email: contact@travelbuddy.com</p>
-      <p>Phone: +123456789</p>
-    </div>
-    <div class="social-icons">
-      <!-- Social Media Icons -->
-      <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-    </div>
-    <div class="right">
-      <!-- Copyright Statement -->
-      <p>&copy; 2023 </p>
-      <p>Travel Buddy</p>
-      <p>All rights reserved.</p>
-    </div>
-  </footer>
+  <?php include 'shared/footer.php'; ?>
 </body>
 <script>
   const fname = <?php echo json_encode($first_name); ?>;

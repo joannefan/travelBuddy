@@ -7,125 +7,9 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
+  <link rel="stylesheet" href="public/css/form.css">
   <title>Contact</title>
   <style type="text/css">
-    h2 {
-      display: block;
-      margin: 0 auto;
-      width: 80%;
-      font-size: 34px;
-      text-align: center;
-      color: #2a3d45;
-    }
-
-    #form-wrapper {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 600px;
-      box-sizing: border-box;
-      background-color: aliceblue;
-      border-radius: 25px;
-      margin-top: 40px;
-    }
-
-    form {
-      background-color: aliceblue;
-      border-radius: 5px;
-      padding-top: 4px;
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 410px;
-      box-sizing: border-box;
-
-    }
-
-    #mailicon {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20%;
-    }
-
-    form h4 {
-      text-align: center;
-      font-size: 24px;
-      color: #2a3d45;
-    }
-
-    #error {
-      color: #496f5d;
-      margin-bottom: 80px;
-      text-align: left;
-      line-height: 1.4em;
-      height: 150px;
-    }
-
-    label {
-      display: inline-block;
-      margin-left: 20px;
-      font-size: 18px;
-      color: #7b5946;
-    }
-
-    input,
-    select,
-    textarea {
-      margin-bottom: 12px;
-      padding: 12px;
-      font-size: 16px;
-      box-sizing: border-box;
-      border-radius: 10px;
-      border: 1px solid #b6b6b6;
-      width: 400px;
-      color: #5b5b5b;
-      font-family: 'Averia Serif Libre', serif;
-    }
-
-    textarea {
-      width: 400px;
-      height: 140px;
-    }
-
-    input[type="submit"] {
-      display: inline-block;
-      align-content: center;
-      text-align: center;
-      background-color: #79adc0;
-      color: rgb(255, 255, 255);
-      font-size: 22px;
-      font-weight: 800;
-      padding: 20px;
-      border-radius: 20px;
-      /* Adding rounded corners */
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #4e92a6;
-      /* Change color on hover */
-      transform: scale(1.1);
-      /* Scale the button slightly on hover */
-      color: white;
-    }
-
-    input[type="checkbox"] {
-      width: fit-content;
-      height: fit-content;
-    }
-
-    .chkbox-label {
-      color: #5b5b5b;
-      margin-left: 10px;
-    }
-
-    .chkboxes-container {
-      display: block;
-      margin-left: 160px;
-    }
   </style>
   <script>
     /*
@@ -174,7 +58,7 @@
 
       if (err != "") {
         document.getElementById('error').innerHTML =
-          "ERRORS:<br>" + err;
+          "ERRORS:<br/>" + err;
         return false;
       }
 
@@ -185,61 +69,51 @@
 </head>
 
 <body>
-  <?php include 'shared/navbar.php'; ?>
+  <?php
+  include 'shared/navbar.php';
+  include 'shared/functions.php';
 
-  <header class="hero-section">
-    <img src="public/images/contact-bg.jpg" alt="Blue walkway/alley in Santorini, Greece">
-    <div class="hero-text">Contact Us</div>
-  </header>
+  createHeroSection('public/images/contact-bg.jpg', 'Blue walkway/alley in Santorini, Greece', 'Contact Us');
+  ?>
 
-  <div id="form-wrapper">
-    <div class="banner" style="display: flex; justify-content: center; text-align: center;">
-      <br /><br />
-      <h2>Get in Touch</h2><br />
-      <img src="public/images/contact-icon.png" id="mailicon" alt="mail icon" style="width: 50px; text-align: center;">
-    </div>
+  <div class="form-container">
+    <p class="form-instruction">If you have any questions or need help, please fill out the form below.</p>
     <form onsubmit="return validate()" method="#" action="#">
-      <h4>If you have any questions or need help, please fill out the form below.</h4><br>
-      <input type="text" name="first" id="fname" placeholder="First name*" /><br />
-      <input type="text" name="last" id="lname" placeholder="Last Name*" /><br />
-      <input type="text" name="email" id="email" placeholder="Email*" /><br />
-      <input type="text" name="phone" id="phone" placeholder="Phone Number" /><br />
-      <select name="query" id="queryType">
-        <option value="" disabled selected>Select a Purpose</option>
-        <option value="donation">Product/Service Question</option>
-        <option value="opportunities">Feature Request</option>
-        <option value="programs">Advertising</option>
-        <option value="collab">Business Inquiry</option>
-        <option value="feedback">General Question</option>
-        <option value="other">Other</option>
-      </select><br />
-      <textarea id="message" placeholder="Message*"></textarea><br /><br /><br />
-      <input type="submit" value="Submit" />
-      <div id="error">&nbsp;</div>
+      <div class="form-group">
+        <input type="text" name="first" id="fname" class="form-control" placeholder="First name*" required />
+      </div>
+      <div class="form-group">
+        <input type="text" name="last" id="lname" class="form-control" placeholder="Last Name*" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email*" required />
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" />
+      </div>
+      <div class="form-group">
+        <select name="query" id="queryType" class="form-control" required>
+          <option value="" disabled selected>Select a Purpose</option>
+          <option value="donation">Product/Service Question</option>
+          <option value="opportunities">Feature Request</option>
+          <option value="programs">Advertising</option>
+          <option value="collab">Business Inquiry</option>
+          <option value="feedback">General Question</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea id="message" class="form-control" placeholder="Message*" required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="submit-btn" value="Submit" />
+        <div id="error">&nbsp;</div>
+      </div>
     </form>
   </div>
 
-  <footer class="footer">
-    <div class="left">
-      <!-- Contact Information -->
-      <p>Contact Us</p>
-      <p>Email: contact@travelbuddy.com</p>
-      <p>Phone: +123456789</p>
-    </div>
-    <div class="social-icons">
-      <!-- Social Media Icons -->
-      <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-    </div>
-    <div class="right">
-      <!-- Copyright Statement -->
-      <p>&copy; 2023 </p>
-      <p>Travel Buddy</p>
-      <p>All rights reserved.</p>
-    </div>
-  </footer>
+
+  <?php include 'shared/footer.php'; ?>
 </body>
 
 </html>
-
-<!-- Form inspired by https://www.pixpa.com/contact-us -->

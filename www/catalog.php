@@ -64,6 +64,7 @@
       margin: 5px;
       font-size: 22px;
       border-radius: 25px;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     }
 
     @media screen and (max-width: 768px) {
@@ -151,7 +152,7 @@
       font-size: 22px;
       font-weight: 800;
       padding: 20px;
-      border-radius: 20px;
+      border-radius: 5px;
       /* Adding rounded corners */
       border: none;
       cursor: pointer;
@@ -192,7 +193,7 @@
       font-size: 22px;
       font-weight: 800;
       padding: 20px;
-      border-radius: 20px;
+      border-radius: 5px;
       border: none;
       cursor: pointer;
       transition: transform 0.3s, background-color 0.3s;
@@ -371,12 +372,12 @@
 </head>
 
 <body>
-  <?php include 'shared/navbar.php'; ?>
+  <?php
+  include 'shared/navbar.php';
+  include 'shared/functions.php';
 
-  <header class="hero-section">
-    <img src="public/images/plan-bg.jpg" alt="Overhead view of a beach shore, bright blue water">
-    <div class="hero-text">Catalog</div>
-  </header>
+  createHeroSection('public/images/plan-bg.jpg', 'Overhead view of a beach shore, bright blue water', 'Catalog');
+  ?>
   <br />
 
   <div class="catalog-center" id="catalog">
@@ -463,25 +464,7 @@
     </div>
     <br />
   </div>
-  <footer class="footer">
-    <div class="left">
-      <!-- Contact Information -->
-      <p>Contact Us</p>
-      <p>Email: contact@travelbuddy.com</p>
-      <p>Phone: +123456789</p>
-    </div>
-    <div class="social-icons">
-      <!-- Social Media Icons -->
-      <a href="https://www.instagram.com/" class="icon instagram"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" class="icon facebook"><i class="fa fa-facebook"></i></a>
-    </div>
-    <div class="right">
-      <!-- Copyright Statement -->
-      <p>&copy; 2023 </p>
-      <p>Travel Buddy</p>
-      <p>All rights reserved.</p>
-    </div>
-  </footer>
+  <?php include 'shared/footer.php'; ?>
 </body>
 
 </html>

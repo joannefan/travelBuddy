@@ -48,8 +48,7 @@
   <section class="section">
     <div class="content">
       <div class="image">
-        <img class="photos" src="public/images/sibling.jpg"
-          alt="photo of cofounder siblings standing side by side with city landscape in the back">
+        <img class="photos" src="public/images/sibling.jpg" alt="photo of cofounder siblings standing side by side with city landscape in the back">
       </div>
       <div class="text2">
         <h2>Vacation Made Easy</h2>
@@ -71,10 +70,10 @@
         <p>
           Today, our company has quickly grown to not only store vacation plans, but also build them to make life as
           easy as possible for our customers. We are a small but mighty team, still based in the family values of our
-          founders. 
+          founders.
         </p>
         <br />
-        <p> 
+        <p>
           All that to say, vacation should be easy and we're here to help to make it as seamless a process as
           possible. We're always here to help our customers get the best vacation experience possible, because we
           understand how frustrating planning can be. Contact us with any questions, comments, or feedback at all and a
@@ -83,25 +82,7 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="left">
-        <!-- Contact Information -->
-        <p>Contact Us</p>
-        <p>Email: contact@travelbuddy.com</p>
-        <p>Phone: +123456789</p>
-      </div>
-      <div class="social-icons">
-        <!-- Social Media Icons -->
-        <a href="#" class="icon instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="icon facebook"><i class="fa fa-facebook"></i></a>
-      </div>
-      <div class="right">
-        <!-- Copyright Statement -->
-        <p>&copy; 2023 </p>
-        <p>Travel Buddy</p>
-        <p>All rights reserved.</p>
-      </div>
-    </footer>
+    <?php include 'shared/footer.php'; ?>
   </div>
 
 </body>
