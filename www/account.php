@@ -32,9 +32,9 @@ include 'shared/navbar.php';
 include 'shared/functions.php';
 
 if ($count == 0) {
-  $heroText = 'Account <p style="font-size:30px;"><br/> You have no trips saved! <a class="inline-link" href="catalog.php">Plan a trip today ✈️</a></p>';
+  $heroText = 'Account <p class="hero-subtitle"> You have no trips saved! <a class="inline-link" href="catalog.php">Plan a trip today ✈️</a></p>';
 } else {
-  $heroText = 'Account <p style="font-size:30px;"><br/> Here are your previous trips!</p>';
+  $heroText = 'Account <p class="hero-subtitle"> Here are your previous trips!</p>';
 }
 
 createHeroSection('public/images/login-bg.jpg', 'Hero Image', $heroText);

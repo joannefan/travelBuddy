@@ -42,7 +42,6 @@
 
   createHeroSection('public/images/index-bg.jpg', 'Hero Image', 'Travel Buddy');
   ?>
-  <br /><br /><br />
 
   <div class="maintxt">
     <?php

@@ -25,6 +25,7 @@
 
     .box h3 {
       color: #ffcda1;
+      padding: 10px 0px;
     }
 
     .icon-container {
@@ -38,12 +39,8 @@
       padding: 10px;
     }
 
-    .icon-container label {
-      padding: 10px;
-    }
-
     .box:hover {
-      background-color: #4e92a6;
+      background-color: rgb(115, 184, 208);
       /* Change color on hover */
       transform: scale(1.1);
       /* Scale the button slightly on hover */
@@ -55,14 +52,15 @@
       text-align: center;
       position: relative;
       box-sizing: border-box;
-      background-color: rgb(115, 184, 208);
+      background-color: #4e92a6;
       color: rgb(255, 255, 255);
       float: left;
       width: 30%;
       padding: 20px 20px;
       /* height: 500px; */
       margin: 5px;
-      font-size: 22px;
+      font-size: 18px;
+      line-height: 1.6em;
       border-radius: 25px;
       transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     }
@@ -143,28 +141,6 @@
       height: 140px;
     }
 
-    input[type="submit"] {
-      display: inline-block;
-      align-content: center;
-      text-align: center;
-      background-color: #79adc0;
-      color: rgb(255, 255, 255);
-      font-size: 22px;
-      font-weight: 800;
-      padding: 20px;
-      border-radius: 5px;
-      /* Adding rounded corners */
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #4e92a6;
-      transform: scale(1.1);
-      color: white;
-    }
-
     input[type="checkbox"] {
       width: fit-content;
       height: fit-content;
@@ -190,8 +166,8 @@
       text-align: center;
       background-color: #79adc0;
       color: rgb(255, 255, 255);
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 20px;
+      font-weight: 500;
       padding: 20px;
       border-radius: 5px;
       border: none;
@@ -383,31 +359,25 @@
   <div class="catalog-center" id="catalog">
     <div class="box" onclick="purchase('Basic', 50)" id="box1">
       <h3>Basic Plan</h3>
-      <br /><br />
       With the basic plan you will get information about flights and hotels for
       your desired destination! We will provide you with a plethora of flights and a variety
       of hotels so you can choose whichever best suits your needs! Keeping it simple and sweet, our basic plan
       knows how to make ends meet!
-      <br /><br /><br />
       <h3>Cost: $50</h3>
     </div>
     <div class="box" onclick="purchase('Gold', 80)" id="box2">
       <h3>Gold Plan</h3>
-      <br /><br />
       Our Gold Option adds events for you do at your destination! You will get all of the
       information about flights and hotels that are included with our basic plan, with the addition
       of locations and attractions that are a must see at your destination. You'll be able to choose
       from the myriad of possibilities that we provide you!
-      <br /><br /><br />
       <h3>Cost: $80</h3>
     </div>
     <div class="box" onclick="purchase('Premium', 120)" id="box3">
       <h3>Premium Plan</h3>
-      <br /><br />
       Our Premium Option provides peak user personalization and a guaranteed fun time! You will get information about flights, hotels, locations, and even
       all the best food!
       Finally, with additional access to special filters for things like dietary restrictions, we will have your perfect vacation right at your finger tips.
-      <br /><br /><br />
       <h3>Cost: $120</h3>
     </div>
   </div>

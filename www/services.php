@@ -16,35 +16,32 @@
 </head>
 
 <body>
-  <?php include 'shared/navbar.php'; ?>
+  <?php
+  include 'shared/navbar.php';
+  include 'shared/functions.php';
 
-  <header class="hero-section">
-    <!-- Image spanning the entire page -->
-    <img src="public/images/services-bg.jpg" alt="Hero Image">
-    <div class="hero-text">Our Services</div>
-  </header>
+  createHeroSection("public/images/services-bg.jpg", "Hero Image", "Our Services");
+  ?>
   <br />
 
   <div class="maintxt">
 
     <section class="parasection">
-      <div class="textsection">
-        <h2>What do we offer?</h2>
-        <p>Let us help you plan your perfect vacation! Using our services will allow for you to gain the vacation of
-          your dreams without the stress of planning, just give us your dream destination and we'll do the rest. After
-          specifying your travel destination, you can also customize further by genre of events you'd like us to
-          reccommend. If you want food we will give you a list of amazing restaurants and cafes, if you want the
-          ultimate sightseeing experience we will provide you tourist attractions, and so many more categories to
-          choose from.</p><br />
+      <h2>What do we offer?</h2>
+      <p>Let us help you plan your perfect vacation! Using our services will allow for you to gain the vacation of
+        your dreams without the stress of planning, just give us your dream destination and we'll do the rest. After
+        specifying your travel destination, you can also customize further by genre of events you'd like us to
+        reccommend. If you want food we will give you a list of amazing restaurants and cafes, if you want the
+        ultimate sightseeing experience we will provide you tourist attractions, and so many more categories to
+        choose from.</p><br />
 
-        <p><i><strong>Our offerings include 3 special packages to choose from!</strong></i></p>
-        <p style="text-align: left; list-style: none;">
-          <li>Basic: Flights &amp; hotels</li>
-          <li>Gold: Flights, hotels, &amp; attractions</li>
-          <li>Premium: Flights, hotels, attractions, &amp; food</li>
-        </p>
-        <br />
-      </div>
+      <p><i><strong>Our offerings include 3 special packages to choose from!</strong></i></p>
+      <p style="text-align: left; list-style: none;">
+        <li>Basic: Flights &amp; hotels</li>
+        <li>Gold: Flights, hotels, &amp; attractions</li>
+        <li>Premium: Flights, hotels, attractions, &amp; food</li>
+      </p>
+      <br />
 
       <a href="catalog.php">
         <button>Plan Your Trip Today</button>

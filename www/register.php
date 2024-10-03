@@ -89,7 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Sign Up</title>
   <link href="public/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

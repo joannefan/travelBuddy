@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT-Serif">
   <style>
+    .text2 {
+      font-size: 18px;
+    }
+
+    .image img {
+      max-height: 400px;
+    }
+
     @media screen and (max-width: 768px) {
       .content {
         flex-direction: column;
@@ -36,19 +44,19 @@
 </head>
 
 <body>
-  <?php include 'shared/navbar.php'; ?>
+  <?php
+  include 'shared/navbar.php';
+  include 'shared/functions.php';
 
-  <header class="hero-section">
-    <!-- Image spanning the entire page -->
-    <img src="public/images/story-bg.jpg" alt="Blue skyline image of tokyo">
-    <div class="hero-text">Our Story</div>
-  </header>
+  createHeroSection("public/images/story-bg.jpg", "Blue skyline image of tokyo", "Our Story");
+  ?>
+
   <br />
 
   <section class="section">
     <div class="content">
       <div class="image">
-        <img class="photos" src="public/images/sibling.jpg" alt="photo of cofounder siblings standing side by side with city landscape in the back">
+        <img src="public/images/sibling.jpg" alt="photo of cofounders with city landscape">
       </div>
       <div class="text2">
         <h2>Vacation Made Easy</h2>
@@ -66,24 +74,22 @@
 
   <div class="maintxt">
     <section class="parasection">
-      <div class="textsection">
-        <p>
-          Today, our company has quickly grown to not only store vacation plans, but also build them to make life as
-          easy as possible for our customers. We are a small but mighty team, still based in the family values of our
-          founders.
-        </p>
-        <br />
-        <p>
-          All that to say, vacation should be easy and we're here to help to make it as seamless a process as
-          possible. We're always here to help our customers get the best vacation experience possible, because we
-          understand how frustrating planning can be. Contact us with any questions, comments, or feedback at all and a
-          member of our team will get back to within 24 hours, guaranteed.
-        </p>
-      </div>
+      <p>
+        Today, our company has quickly grown to not only store vacation plans, but also build them to make life as
+        easy as possible for our customers. We are a small but mighty team, still based in the family values of our
+        founders.
+      </p>
+      <br />
+      <p>
+        All that to say, vacation should be easy and we're here to help to make it as seamless a process as
+        possible. We're always here to help our customers get the best vacation experience possible, because we
+        understand how frustrating planning can be. Contact us with any questions, comments, or feedback at all and a
+        member of our team will get back to within 24 hours, guaranteed.
+      </p>
     </section>
 
-    <?php include 'shared/footer.php'; ?>
   </div>
+  <?php include 'shared/footer.php'; ?>
 
 </body>
 
